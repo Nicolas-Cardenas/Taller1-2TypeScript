@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col" >
                 <div class = "card">
-                <h1>Nicolás Cárdenas Segura</h1>
+                <h1 id="nombre"></h1>
                 <img src="https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171001395/87232180-hombre-joven-con-gafas-avatar-car%C3%A1cter-ilustraci%C3%B3n-vectorial-de-dise%C3%B1o.jpg" height="300px" width="300px" alt="Avatar">
                  </div>
                 <div class = "card">
@@ -25,26 +25,29 @@
                     <tbody>
                         <tr>
                             <td>Código</td>
-                            <td>201820831</td>
+                            <td id = "codigo"></td>
                         </tr>
                         <tr>
                             <td>Cédula</td>
-                            <td>1000270114</td>
+                            <td id = "cedula"></td>
                         </tr>
                         <tr>
                             <td>Edad</td>
-                            <td>20 Años</td>
+                            <td id = "edad"></td>
                         </tr>
                         <tr>
                             <td>Dirección</td>
-                            <td>Carrera 54 # 126-35</td>
+                            <td id="direccion"></td>
                         </tr>
                         <tr>
                             <td>Teléfono</td>
-                            <td>3214629342</td>
+                            <td id = "telefono"></td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
+                <div class = "card">
+                    <h3>  Buscar cursos por nombre</h3>
                 <form style="margin:10px;">
                     <div class="form-row">
                       <div class="col">
@@ -54,7 +57,15 @@
                           <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
                       </div>
                     </div>
+                    <h3>Buscar cursos por rango de créditos</h3>
+                    <input type="text" class="form-control" id="bajo"
+                                placeholder="Rango Inferior ">
+                    <input type="text" class="form-control" id="alto"
+                                placeholder="Rango Superior ">            
+                    <button type="button" id="rango"
+                                class="btn btn-success">Aplicar</button>  
                 </form>
+                </div>
                 <table class="table">
                     <thead class="thead-dark">
                        <tr>
@@ -65,11 +76,16 @@
                     </thead>
                     <tbody id="courses">
                     </tbody>
-                    </div>
+                    
+                    
             </div>
             
+            
         </div>
+        <h5 ><strong>Total Créditos:</strong></h5>
+        <h5 id="total-credits"><strong></strong></h5>
     </div>
+    
 
     <script type="module" src="./scripts/course.js" ></script>
         <script type="module" src="./scripts/dataCourses.js" ></script>
